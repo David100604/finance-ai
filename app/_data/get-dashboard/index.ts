@@ -9,6 +9,7 @@ export const getDashboard = async (month: string) => {
     throw new Error("Unauthorized");
   }
   const where = {
+    userId,
     date: {
       gte: new Date(`2024-${month}-01`),
       lt: new Date(`2024-${month}-31`),
